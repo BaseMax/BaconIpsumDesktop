@@ -1,5 +1,4 @@
 // Copyright (C) 2022 Kambiz Asadzadeh
-// Copyright (C) 2022 Max Base
 // SPDX-License-Identifier: LGPL-3.0-only
 
 import QtQuick
@@ -28,7 +27,6 @@ ApplicationWindow {
         property string result : "";
 
     }
-
     FontSystem { id: fontSystem; }
 
     //! Remove extra double quote for some json outputs.
@@ -100,7 +98,7 @@ ApplicationWindow {
                     anchors.fill: mainBorder
                     glowRadius: 32
                     spread: 0.1
-                    color: "#f2f1fb"
+                    color: "#dce7ff"
                     cornerRadius: mainBorder.radius + glowRadius
                 }
 
@@ -110,7 +108,7 @@ ApplicationWindow {
                     anchors.fill: parent
                     color: "#ffffff"
                     border.width: 1
-                    border.color: "#f2f2f2"
+                    border.color: "#dce7ff"
                     radius: 15
                 }
 
@@ -136,7 +134,7 @@ ApplicationWindow {
                                 Text {
                                     font.family: fontSystem.getContentFont.name
                                     font.pixelSize: 14
-                                    text: qsTr("Total of Paragraphs")
+                                    text: qsTr("Total of paragraphs")
                                 }
 
                                 Item { width: 10;}
@@ -167,7 +165,7 @@ ApplicationWindow {
                                         height: parent.height
                                         implicitWidth: 40
                                         implicitHeight: 40
-                                        radius: 11
+                                        radius: width
                                         color: control.up.pressed ? "#e4e4e4" : "#f6f6f6"
                                         border.color: "#ccc"
 
@@ -187,7 +185,7 @@ ApplicationWindow {
                                         height: parent.height
                                         implicitWidth: 40
                                         implicitHeight: 40
-                                        radius: 11
+                                        radius: width
                                         color: control.down.pressed ? "#e4e4e4" : "#f6f6f6"
                                         border.color: "#ccc"
 
@@ -205,7 +203,7 @@ ApplicationWindow {
                                     background: Rectangle {
                                         implicitWidth: 130
                                         border.color: "#ccced0"
-                                        radius: 11
+                                        radius: width
                                         layer.enabled: true
                                         layer.effect: DropShadow {
                                             transparentBorder: true
@@ -220,7 +218,7 @@ ApplicationWindow {
 
                                 }
 
-                                Item { width: 15; }
+                                Item { width: 10; }
 
                                 Button {
                                     id: shortButton
@@ -235,7 +233,7 @@ ApplicationWindow {
                                         transparentBorder: true
                                         horizontalOffset: 0
                                         verticalOffset: 3
-                                        color: "#ccc"
+                                        color: "#999"
                                         radius: 16
                                         samples: 32
                                         spread: 0.0
@@ -246,7 +244,7 @@ ApplicationWindow {
                                         id: shortButtonBack
                                         anchors.fill: parent
                                         color: "#171c26"
-                                        radius: 5
+                                        radius: width
                                         z: 2
                                     }
                                     contentItem: Text {
@@ -304,9 +302,10 @@ ApplicationWindow {
                                 wrapMode: Text.WordWrap
                                 textFormat: TextEdit.AutoText
                                 topPadding: -10
-                                bottomPadding: 30
+                                bottomPadding: 3
 
                             }
+
 
                         }
                     }
@@ -323,7 +322,6 @@ ApplicationWindow {
                 color: "#85878d"
             }
         }
-
 
         BusyIndicator {
             id: busyIndicator
@@ -384,6 +382,5 @@ ApplicationWindow {
                 }
             }
         }
-
     }
 }
