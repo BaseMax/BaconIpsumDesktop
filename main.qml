@@ -1,4 +1,5 @@
 // Copyright (C) 2022 Kambiz Asadzadeh
+// Copyright (C) 2022 Max Base
 // SPDX-License-Identifier: LGPL-3.0-only
 
 import QtQuick
@@ -304,7 +305,7 @@ ApplicationWindow {
                                 textFormat: TextEdit.AutoText
                                 topPadding: -10
                                 bottomPadding: 30
-                                
+
                             }
 
                         }
@@ -314,11 +315,11 @@ ApplicationWindow {
             }
             Text {
                 font.family: fontSystem.getContentFont.name
-                font.pixelSize: 10
+                font.pixelSize: 15
                 font.bold: false
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 onLinkActivated: Qt.openUrlExternally(link)
-                text: '<html><style type="text/css"></style>Created by <strong><a href="https://github.com/KambizAsadzadeh">Kambiz Asadzadeh</a></strong>, based on C++ & Qt Quick.</html>'
+                text: 'A Meatier Lorem Ipsum Generator.'
                 color: "#85878d"
             }
         }
