@@ -135,7 +135,7 @@ ApplicationWindow {
                                 Text {
                                     font.family: fontSystem.getContentFont.name
                                     font.pixelSize: 14
-                                    text: qsTr("Total of Paragraph")
+                                    text: qsTr("Total of Paragraphs")
                                 }
 
                                 Item { width: 10;}
@@ -283,12 +283,15 @@ ApplicationWindow {
                         Layout.fillWidth: true
                         Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                         visible: false
+                        spacing: 0
                         ScrollView {
                             id: view
                             anchors.fill: parent
-                            anchors.margins: 5
                             ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
                             ScrollBar.vertical.policy: ScrollBar.AlwaysOn
+                            anchors.margins: 5
+                            background: Rectangle {
+                            }
                             TextArea {
                                 id: contentArea
                                 font.family: fontSystem.getContentFont.name
@@ -299,6 +302,9 @@ ApplicationWindow {
                                 color: appStyle.foregroundActivated
                                 wrapMode: Text.WordWrap
                                 textFormat: TextEdit.AutoText
+                                topPadding: -10
+                                bottomPadding: 30
+                                
                             }
 
                         }
