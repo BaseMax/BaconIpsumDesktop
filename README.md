@@ -12,8 +12,11 @@ We are using the [Bacon Ipsum API](https://baconipsum.com/json-api/) to generate
 - CMake 3.14
 
 ## Screenshots
+<img width="796" alt="Screenshot 2022-12-09 at 12 51 54 PM" src="https://user-images.githubusercontent.com/4066299/206668568-e0a6850d-44bb-4108-84fe-86b6245d07d5.png">
 
-<img width="787" alt="Screenshot 2022-12-08 at 5 13 40 PM" src="https://user-images.githubusercontent.com/4066299/206461887-a379e4a6-6b7a-43c7-8082-dd82957df96c.png">
+
+<img width="796" alt="Screenshot 2022-12-09 at 12 52 07 PM" src="https://user-images.githubusercontent.com/4066299/206668584-91ed2640-4486-418d-8428-a2dd44b4c6d3.png">
+
 
 ### Build
 
